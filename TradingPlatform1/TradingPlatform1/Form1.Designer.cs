@@ -59,6 +59,10 @@ namespace TradingPlatform1
             this.btnBuy = new System.Windows.Forms.Button();
             this.chkOutside = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.listViewTns = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             this.SuspendLayout();
@@ -284,7 +288,7 @@ namespace TradingPlatform1
             "GTC"});
             this.cbTif.Location = new System.Drawing.Point(462, 189);
             this.cbTif.Name = "cbTif";
-            this.cbTif.Size = new System.Drawing.Size(121, 21);
+            this.cbTif.Size = new System.Drawing.Size(72, 21);
             this.cbTif.TabIndex = 20;
             this.cbTif.Text = "DAY";
             // 
@@ -363,11 +367,42 @@ namespace TradingPlatform1
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // listViewTns
+            // 
+            this.listViewTns.BackColor = System.Drawing.Color.Black;
+            this.listViewTns.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listViewTns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.listViewTns.ForeColor = System.Drawing.Color.White;
+            this.listViewTns.HideSelection = false;
+            this.listViewTns.Location = new System.Drawing.Point(670, 76);
+            this.listViewTns.Name = "listViewTns";
+            this.listViewTns.Size = new System.Drawing.Size(335, 533);
+            this.listViewTns.TabIndex = 30;
+            this.listViewTns.UseCompatibleStateImageBehavior = false;
+            this.listViewTns.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Price";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Shares";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Time";
+            this.columnHeader3.Width = 80;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 685);
+            this.ClientSize = new System.Drawing.Size(1079, 685);
+            this.Controls.Add(this.listViewTns);
             this.Controls.Add(this.chkOutside);
             this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.btnSell);
@@ -436,6 +471,10 @@ namespace TradingPlatform1
         private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.CheckBox chkOutside;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ListView listViewTns;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 
